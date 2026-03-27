@@ -28,7 +28,7 @@ Program name: index.html
 Author: Gabriel Lopez
 Date created: 3/24/2026
 Date last edited: 3/27/2026
-Version: 1.11
+Version: 1.13
 Description: Cross Physical Therapy Patient Registration Form where you are filling out information for the company to better suit your needs
 -->
 
@@ -338,7 +338,7 @@ document.addEventListener('DOMContentLoaded', () => {
           
           const age = today.getFullYear() - birthDate.getFullYear();
           if (age > 120) {
-            return "Birthday cannot be more than 120 years ago";
+            return "You will likely be dead by the time you need physical therapy... Please enter a valid birth date :)";
           }
           return "";
         }
@@ -352,7 +352,7 @@ document.addEventListener('DOMContentLoaded', () => {
           const moveDate = new Date(value + 'T00:00:00');
           
           if (moveDate < today) {
-            return "Move-in date cannot be in the past";
+            return "Move in date cannot be in the past";
           }
           return "";
         }
@@ -372,7 +372,7 @@ document.addEventListener('DOMContentLoaded', () => {
             return "Email is required";
           }
           if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value)) {
-            return "Email must be in format name@domain.tld";
+            return "Email must be in format name@cougarnet.uh.edu";
           }
           return "";
         }
